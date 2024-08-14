@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Agency</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');</style>
 </head>
 <body>
@@ -21,7 +22,21 @@
     </header>
     <div class="hero">
         <div class="hero-container">
-            <img src="images/slider/bg1.jpg" alt="">
+            <input type="checkbox" id="slide-toggle" class="slide-toggle">
+            <div class="slide-left">
+                <label for="slide-toggle" class="slide-left-label">
+                    <i class="fa-solid fa-angle-left"></i>
+                </label>
+            </div>
+            <div class="slide-right">
+                <label for="slide-toggle" class="slide-right-label">
+                    <i class="fa-solid fa-angle-right"></i>
+                </label>
+            </div>
+            <div class="slider-img">
+                <img src="images/slider/bg1.jpg" alt="">
+                <img src="images/slider/bg2.jpg" alt="">
+            </div>
             <div class="hero-content">
                 <h1><span>WebAgency</span> : l'agence de tous vos projets !</h1>
                 <p>Vous avez un projet web ? La WebAgency vous aide à le réaliser.</p>
@@ -29,5 +44,6 @@
             </div>
         </div>
     </div>
+    
 </body>
 </html>

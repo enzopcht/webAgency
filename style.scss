@@ -1,5 +1,13 @@
 $blueColor : #57a4ec;
-
+@mixin slider {
+    position: absolute;
+        z-index: 4;
+        width: 15px;
+        color: white;
+        padding: 20px 5px;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.3);
+}
 
 
 html {
@@ -43,8 +51,24 @@ header {
     z-index: 0;
     display: flex;
     align-items: center;
-    img {
-        width: 100%;
+    overflow: hidden;
+    .slide-left {
+        @include slider;
+        left: 0px;
+        border-radius: 0 50px 50px 0;
+    }
+    .slide-right {
+        @include slider ;
+        right: 0px;
+        border-radius: 50px 0 0 50px ;
+    }
+    .slider-img {
+        display: flex;
+        width: 200%;
+        transition: transform ease-in-out 1s ;
+        img {
+            width: 1200px;
+        }
     }
     .hero-content {
         position: absolute;
@@ -65,5 +89,12 @@ header {
             padding: 5px;
             border-radius: 5px;
         }
+    }
+    .slide-toggle {
+        display: none;
+    }
+
+    .slide-toggle:checked ~ .slider-img {
+        transform: translateX(-50%);
     }
 }
