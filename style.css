@@ -97,31 +97,31 @@ header ul li a:hover {
   transform: translateX(-50%);
 }
 
-#services {
+#services, #projects {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.services-first-part {
+.section-first-part {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   width: 70%;
 }
-.services-first-part h2 {
+.section-first-part h2 {
   text-transform: uppercase;
   font-size: 30px;
   font-weight: 500;
 }
-.services-first-part hr {
+.section-first-part hr {
   width: 200px;
   color: lightgray;
   position: relative;
   overflow: visible;
 }
-.services-first-part hr::after {
+.section-first-part hr::after {
   display: block;
   content: " ";
   border-radius: 50%;
@@ -133,7 +133,7 @@ header ul li a:hover {
   left: 87px;
   border: #fff solid 7px;
 }
-.services-first-part p {
+.section-first-part p {
   color: gray;
   margin: 20px 0;
 }
@@ -203,4 +203,64 @@ header ul li a:hover {
   to {
     transform: rotate(-360deg);
   }
+}
+#projects {
+  background-color: rgb(243, 240, 240);
+}
+#projects hr::after {
+  border-color: rgb(243, 240, 240);
+}
+
+.projects-nav {
+  display: flex;
+  padding: 10px 0;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
+.projects-nav li {
+  list-style-type: none;
+}
+.projects-nav li a {
+  text-decoration: none;
+  color: grey;
+  padding: 10px 20px;
+  background-color: lightgray;
+}
+.projects-nav li a:hover {
+  color: white;
+  background-color: #57a4ec;
+}
+
+.projects-second-part {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+.projects-second-part .projects-items {
+  width: 100%;
+  position: relative;
+}
+.projects-second-part .projects-items img {
+  width: 100%;
+}
+.projects-second-part .projects-items-hover {
+  background-color: rgba(37, 37, 37, 0.705);
+  color: white;
+  position: absolute;
+  height: 30%;
+  width: 100%;
+  bottom: 4px;
+}
+.projects-second-part .projects-items-hover h4, .projects-second-part .projects-items-hover p {
+  margin: 0;
+}
+.projects-second-part .projects-items-hover i {
+  position: absolute;
+  background-color: #57a4ec;
+  padding: 10px;
+  border-radius: 50%;
+  top: -17px;
+  right: 25px;
 }/*# sourceMappingURL=style.css.map */
