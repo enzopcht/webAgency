@@ -241,9 +241,15 @@ header ul li a:hover {
 .projects-second-part .projects-items {
   width: 100%;
   position: relative;
+  overflow: hidden;
+}
+.projects-second-part .projects-items:hover .projects-items-hover {
+  transform: translateY(0);
+  transition: transform 0.5s;
 }
 .projects-second-part .projects-items img {
   width: 100%;
+  height: 100%;
 }
 .projects-second-part .projects-items-hover {
   background-color: rgba(37, 37, 37, 0.705);
@@ -251,7 +257,9 @@ header ul li a:hover {
   position: absolute;
   height: 30%;
   width: 100%;
-  bottom: 4px;
+  bottom: 0px;
+  transform: translateY(150%);
+  transition: transform 0.5s;
 }
 .projects-second-part .projects-items-hover h4, .projects-second-part .projects-items-hover p {
   margin: 0;
